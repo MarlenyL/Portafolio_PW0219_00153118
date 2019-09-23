@@ -1,13 +1,16 @@
 function cinco(palabra){
-    var total = palabra.length;
-    var i = 0;
-    var j = total-1;
-    while(palabra.charAt(i)=== palabra.charAt(j)){
-        if(i===total/2){
+    var I = 0;
+    var J = palabra.length() - 1;
+    var mitad = J / 2;
+    while(palabra[I] == palabra[J]){
+        if(mitad === I){
             return true;
         }
-        i++;
-        j--;
+            J--;
+            I++;
+        if(mitad != I){
+            return false;
+        }
+            
     }
-    return false;
 }
