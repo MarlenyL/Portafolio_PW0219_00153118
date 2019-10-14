@@ -30,7 +30,7 @@ function addRow(carnet,schedule,late,tbody){
 
     var cellContainer2 = document.createElement("td");
     var validInput = document.createElement("input");
-    validInput.classList.add("input"+counterId);
+    validInput.id="input"+counterId;
     validInput.type = Text;
     
 
@@ -44,7 +44,7 @@ function addRow(carnet,schedule,late,tbody){
         
         var idElement = event.srcElement.value;
         var trToDelete = document.querySelector(`button[value='${idElement}']`).parentElement.parentElement;
-        var validCarnet = document.querySelector(`.input${idElement}`).value;
+        var validCarnet = document.querySelector(`#input${idElement}`).value;
 
         rows.forEach((item,index) => {
             if(item.id == idElement){
